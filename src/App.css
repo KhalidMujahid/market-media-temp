@@ -1,0 +1,81 @@
+/* Base Styles */
+.bg-dark {
+  background-color: #192A3E; /* Deep blue */
+}
+
+.text-white {
+  color: #fff;
+}
+
+.bg-primary {
+  background-color: #00d8ff; /* Vibrant neon blue */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.display-4 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1586887493402-78570b70650c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1952&q=80'); /* Your hero image */
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* For parallax effect */
+}
+
+.parallax-layer-1,
+.parallax-layer-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1; /* Behind the hero content */
+}
+
+.hero::before { /* Overlay for readability */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Feature Cards */
+.feature-card {
+  border: none;
+  transition: transform 0.3s ease-in-out;
+  perspective: 600px;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) translateZ(10px) rotateY(2deg);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+  /* ... */
+}
+
+/* Responsive Design (Adjust as needed) */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 40vh;
+  }
+}
